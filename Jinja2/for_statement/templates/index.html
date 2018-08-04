@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head> 
+  <meta charset="utf-8">
+  <title>注册页面</title>
+</head> 
+<body>
+  {% for k,v in user.items() %}
+    <p>{{k}}:{{v}}</p>
+  {% endfor %}
+<hr>
+  {% for x in user.keys() %}
+  <p>this is {{x}}</p>
+  {% endfor %}
+<hr>
+  {% for website in websites %}
+    <p>{{website}}</p>
+  {% endfor %}
+
+<!--command加上/，批量注释-->
+
+
+
+</body>
+</html>
+
+

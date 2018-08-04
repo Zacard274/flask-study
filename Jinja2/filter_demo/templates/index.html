@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head> 
+  <meta charset="utf-8">
+  <title>注册页面</title>
+</head> 
+<body>
+  <img src="{{ avatar|default('https://www.baidu.com/img/bd_logo1.png?where=super') }}">
+
+<!--当不存在avatar变量时，默认传入default的图片；传入avatar变量图片时就显示变量图片-->
+
+<hr>
+<p>评论数({{ comments|length }})</p>
+
+<!--输入comments变量的长度-->
+
+<ul>
+  {% for comment in comments %}
+  <li>
+    <a href="#">{{ comment.user }}</a>
+    <p>{{ comment.content }}</p>
+  </li>
+  {% endfor %}
+</ul>
+
+</body>
+</html>
+
+

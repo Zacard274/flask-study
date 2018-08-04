@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head> 
+  <meta charset="utf-8">
+  <title>注册页面</title>
+</head> 
+<body>
+  {% if user and user.age>18 %}
+    <a href="#">{{user.username}}</a>
+    <a href="#">注销</a>
+
+  <!--判断当user存在时，且age>18，执行下面操作。而不是判断is_login,因为传入到html的参数是user-->
+
+  {% else %}
+    <a href="#">登录</a>
+    <a href="#">注册</a>
+  {% endif %}
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head> 
+  <meta charset="utf-8">
+  <title>注册页面</title> 
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="{{ url_for("static",filename="layui.css") }}">
+  <style type="text/css">
+    hr {color:sienna;}
+	p {text-align:center}
+	h1{background:#b0c4de;text-align:center}
+	/*h2{text-align:center}*/
+	form{text-align:center}
+  </style>
+</head> 
+<body>
+<h1>欢迎来到注册页面</h1>
+<hr> 
+<!--<h2><b><font size='4'>请输入您的用户名和密码</font></b></h2>-->
+<br><br>
+
+<form action="/login" name='input' method='post'>
+<legend>请在此输入用户名和密码:</legend><br>
+用户名：<input type="text" name ="username" size="30"><br><br>
+密 码：<input type="password" name="password" size="30"><br><br>
+(提示：密码为纯数字）<br><br>
+<input type="submit" value="登录" class="layui-btn">
+<input type="submit" value="注册" class="layui-btn" formaction="registe"><br><br>
+</form>
+
+<!--
+<fieldset class="layui-elem-field site-demo-button" style="margin-top: 30px;text-align:center">
+  <div>
+	  <button class="layui-btn"><a href="http://www.baidu.com">注册</a></button> 
+  </div>
+</fieldset>
+-->
+
+</body>
+</html>
